@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Produtos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="cabecalho container">
+      <h1 class="cabecalho__titulo">Catálogo de Produtos</h1>
+      <p class="cabecalho__texto">Pesquise e filtre produtos por categoria</p>
+    </header>
+
+    <main class="main container">
+      <section class="filtros">
+        <form class="filtros__form">
+          <label for="busca-produto" class="visualmente-oculto"
+            >Pesquisar produtos</label
+          >
+          <input
+            type="search"
+            id="busca-produto"
+            name="busca"
+            class="filtros__input"
+            placeholder="Pesquisar produtos..."
+          />
+
+          <label for="filtro-categoria" class="visualmente-oculto"
+            >Filtrar por categoria</label
+          >
+          <select
+            id="filtro-categoria"
+            name="filtro-categoria"
+            class="filtros__select"
+          >
+            <option value="" selected>Todas Categorias</option>
+            <option value="eletronicos">Eletrônicos</option>
+            <option value="moveis">Móveis</option>
+            <option value="roupas">Roupas</option>
+            <option value="alimentos">Alimentos</option>
+            <option value="outros">Outros</option>
+          </select>
+
+          <button type="button" class="filtros__botao">Buscar</button>
+        </form>
+      </section>
+
+      <section class="tabela">
+        <div class="tabela__container">
+          <table class="tabela__table">
+            <thead class="tabela__head">
+              <tr>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Preço (R$)</th>
+                <th>Quantidade</th>
+                <th>Descrição</th>
+              </tr>
+            </thead>
+
+            <tbody class="tabela__body">
+              <tr>
+                <td>Cadeira</td>
+                <td>Móveis</td>
+                <td>56,20</td>
+                <td>12</td>
+                <td>Cadeira de madeira vermelha</td>
+              </tr>
+              <tr>
+                <td>Blusa Preta M</td>
+                <td>Roupas</td>
+                <td>25,50</td>
+                <td>57</td>
+                <td>Blusa preta com estampa dos Beatles M</td>
+              </tr>
+              <tr>
+                <td>Notebook Dell</td>
+                <td>Eletrônicos</td>
+                <td>3.200,00</td>
+                <td>8</td>
+                <td>Notebook Dell Inspiron i5 8GB RAM</td>
+              </tr>
+              <tr>
+                <td>Smartphone Samsung</td>
+                <td>Eletrônicos</td>
+                <td>1.899,99</td>
+                <td>15</td>
+                <td>Galaxy A32 128GB Preto</td>
+              </tr>
+              <tr>
+                <td>Sofá 3 lugares</td>
+                <td>Móveis</td>
+                <td>1.250,00</td>
+                <td>5</td>
+                <td>Sofá de tecido cinza 3 lugares</td>
+              </tr>
+              <tr>
+                <td>Camisa Social Branca</td>
+                <td>Roupas</td>
+                <td>89,90</td>
+                <td>34</td>
+                <td>Camisa social masculina branca G</td>
+              </tr>
+              <tr>
+                <td>Caneca de Cerâmica</td>
+                <td>Outros</td>
+                <td>19,90</td>
+                <td>120</td>
+                <td>Caneca branca 300ml personalizada</td>
+              </tr>
+              <tr>
+                <td>Arroz Integral 1kg</td>
+                <td>Alimentos</td>
+                <td>12,50</td>
+                <td>50</td>
+                <td>Pacote de arroz integral 1kg</td>
+              </tr>
+              <tr>
+                <td>Geladeira Frost Free</td>
+                <td>Eletrônicos</td>
+                <td>2.450,00</td>
+                <td>3</td>
+                <td>Geladeira 350L Frost Free Inox</td>
+              </tr>
+              <tr>
+                <td>Jaqueta Masculina</td>
+                <td>Roupas</td>
+                <td>179,90</td>
+                <td>20</td>
+                <td>Jaqueta de couro sintético preta</td>
+              </tr>
+              <tr>
+                <td>Estante de Madeira</td>
+                <td>Móveis</td>
+                <td>399,00</td>
+                <td>10</td>
+                <td>Estante de madeira para livros</td>
+              </tr>
+              <tr>
+                <td>Chocolate Ao Leite 100g</td>
+                <td>Alimentos</td>
+                <td>8,50</td>
+                <td>200</td>
+                <td>Chocolate ao leite 100g</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
