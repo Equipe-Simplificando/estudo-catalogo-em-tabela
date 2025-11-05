@@ -70,10 +70,10 @@ export const produtos = [
     descricao: "Livro didático sobre lógica de programação e fundamentos de linguagens modernas."
   },
   {
-    nome: "Gustavo Lindo",
+    nome: "Labubu",
     categoria: "Outros",
     preco: 9.90,
     quantidade: 1,
-    descricao: "Gustavo lindo"
+    descricao: "Labubu, Morando do Amor, Bobbie Goods, Maria Alice, Solta a Carta."
   }
 ];
