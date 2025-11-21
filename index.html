@@ -15,10 +15,9 @@
 
     <main class="main container">
       <section class="filtros">
-        <form class="filtros__form">
-          <label for="busca-produto" class="visualmente-oculto"
-            >Pesquisar produtos</label
-          >
+        <form class="filtros__form" onsubmit="return false;">
+          <label for="busca-produto" class="visualmente-oculto">Pesquisar produtos</label>
+
           <input
             type="search"
             id="busca-produto"
@@ -27,23 +26,22 @@
             placeholder="Pesquisar produtos..."
           />
 
-          <label for="filtro-categoria" class="visualmente-oculto"
-            >Filtrar por categoria</label
-          >
+          <label for="filtro-categoria" class="visualmente-oculto">Filtrar por categoria</label>
+
           <select
             id="filtro-categoria"
             name="filtro-categoria"
             class="filtros__select"
           >
             <option value="" selected>Todas Categorias</option>
-            <option value="eletronicos">Eletrônicos</option>
-            <option value="moveis">Móveis</option>
-            <option value="roupas">Roupas</option>
-            <option value="alimentos">Alimentos</option>
-            <option value="outros">Outros</option>
+            <option value="Eletrônicos">Eletrônicos</option>
+            <option value="Móveis">Móveis</option>
+            <option value="Roupas">Roupas</option>
+            <option value="Alimentos">Alimentos</option>
+            <option value="Outros">Outros</option>
           </select>
 
-          <button type="button" class="filtros__botao">Buscar</button>
+          <button type="button" id="btn-buscar" class="filtros__botao">Buscar</button>
         </form>
       </section>
 
@@ -61,9 +59,7 @@
               </tr>
             </thead>
 
-            <tbody id="tbody" class="tabela__body">
-              
-            </tbody>
+            <tbody id="tbody" class="tabela__body"></tbody>
           </table>
         </div>
       </section>
