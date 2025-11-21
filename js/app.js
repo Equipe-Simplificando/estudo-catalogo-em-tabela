@@ -1,4 +1,6 @@
-import { produtos } from "./produtos.js";
+import { produtos as produtosBase } from "./produtos.js";
+
+let produtos = JSON.parse(localStorage.getItem("produtos")) || produtosBase;
 
 const tbody = document.getElementById("tbody");
 const campoBusca = document.getElementById("busca-produto");
@@ -6,12 +8,12 @@ const campoCategoria = document.getElementById("filtro-categoria");
 const botaoBuscar = document.getElementById("btn-buscar");
 
 // -----------------------------
-// Função para preencher tabela
+// Preenche a tabela
 // -----------------------------
 function preencherTabela(lista) {
-  tbody.innerHTML = ""; // limpa a tabela
+  tbody.innerHTML = "";
 
-  lista.forEach((produto) => {
+  lista.forEach(produto => {
     let tr = tbody.insertRow();
 
     tr.insertCell().innerText = produto.nome;
@@ -22,16 +24,18 @@ function preencherTabela(lista) {
 
     let tdAcoes = tr.insertCell();
     tdAcoes.innerHTML = `
-      <button class="acoes__botao" onclick="alert('Editar ${produto.nome}')">Editar</button>
+      <button class="acoes__botao" onclick="window.location.href='editar.html?id=${produto.id}'">Editar</button>
       <button class="acoes__botao" style="background:red" onclick="alert('Excluir ${produto.nome}')">Excluir</button>
     `;
   });
 }
 
 // -----------------------------
-// Função de busca (acionada pelo botão)
+// Filtrar produtos
 // -----------------------------
 function filtrarProdutos() {
+  produtos = JSON.parse(localStorage.getItem("produtos")) || produtosBase;
+
   const texto = campoBusca.value.toLowerCase();
   const categoria = campoCategoria.value;
 
@@ -45,11 +49,14 @@ function filtrarProdutos() {
 }
 
 // -----------------------------
-// Evento do botão Buscar
-// -----------------------------
 botaoBuscar.addEventListener("click", filtrarProdutos);
 
 // -----------------------------
-// Carrega todos os produtos ao iniciar
+// Atualiza a lista na tela inicial
 // -----------------------------
-preencherTabela(produtos);
+function atualizarLista() {
+  produtos = JSON.parse(localStorage.getItem("produtos")) || produtosBase;
+  preencherTabela(produtos);
+}
+
+atualizarLista();

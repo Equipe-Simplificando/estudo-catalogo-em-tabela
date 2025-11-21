@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 480px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.btn-salvar {
+  background: #007bff;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-voltar {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background: #555;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+}
